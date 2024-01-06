@@ -117,6 +117,13 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+
 /* BUTTON  */
 .button {
   display: inline-block;
