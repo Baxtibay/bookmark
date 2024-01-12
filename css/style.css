@@ -276,6 +276,93 @@ select:-webkit-autofill:focus {
 }
 
 
+/* FEATURE-TAB-PANEL */
+.feature-tab-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-tab-panel__img {
+  margin-right: 30px;
+  object-fit: contain;
+}
+
+.feature-tab-panel__info {
+  max-width: 445px;
+}
+
+.feature-tab-panel__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 52px;
+  color: var(--text-color);
+}
+
+.feature-tab-panel__text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+/* TABS */
+.tabs__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.tabs__item {
+  width: 243px;
+  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+}
+
+.tabs__link {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-bottom: 4px solid transparent;
+  display: block;
+  color: var(--text-color-75);
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.tabs__item--active .tabs__link {
+  border-color: var(--red);
+  color: var(--text-color);
+}
+
+.tabs__link:hover {
+  color: var(--red);
+}
+
+.tabs__link:active {
+  opacity: 0.6;
+}
+
+.tabs__panels {
+  padding-top: 75px;
+  padding-bottom: 165px;
+  background-image: url("../img/blue-pill.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 580px) 156px;
+}
+
+.tabs__panel {
+  display: none;
+}
+
+.tabs__panel--active {
+  display: block;
+}
+
+
 /* SITE-HEADER */
 .site-header {
   padding-top: 48px;
@@ -344,4 +431,10 @@ select:-webkit-autofill:focus {
   height: 385px;
   object-fit: contain;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.50));
+}
+
+
+/* FEATURES */
+.features--section__info {
+  margin-bottom: 44px;
 }
