@@ -262,7 +262,7 @@ select:-webkit-autofill:focus {
 
 .section__title {
   margin-top: 0;
-  margin-right: 16px;
+  margin-bottom: 16px;
   font-size: 32px;
   line-height: 52px;
   font-weight: 500;
@@ -362,7 +362,7 @@ select:-webkit-autofill:focus {
 
 .tabpanels {
   padding-top: 75px;
-  padding-bottom: 165px;
+  padding-bottom: 148px;
   background-image: url("../img/blue-pill.svg");
   background-repeat: no-repeat;
   background-position: calc(50% - 580px) 156px;
@@ -449,12 +449,20 @@ select:-webkit-autofill:focus {
 
 
 /* FEATURES */
+.features__section {
+  margin: 90px 0;
+}
+
 .features--section__info {
   margin-bottom: 44px;
 }
 
 
 /* EXTENSIONS */
+.extensions {
+  margin-bottom: 150px;
+}
+
 .extensions__inner {
   max-width: 910px;
   margin: 0 auto;
