@@ -1,3 +1,10 @@
+// Js modifier classes
+const modifiers = {
+  tabItemActive: 'tabs__item--active',
+  tabPanelActive: 'tabpanels__item--active',
+  accordionItemOpen: 'accordion__item--open'
+}
+
 const elsTabsItem = document.querySelectorAll('.tabs__item')
 const elsTabLink = document.querySelectorAll('.js-tab-link')
 const elsTabsPanel = document.querySelectorAll('.tabpanels__item')
@@ -18,18 +25,18 @@ elsTabLink.forEach(elTabLink => {
     e.preventDefault()
 
     // Remove active class from tabs__item elements
-    deActiviteElementItem(elsTabsItem, 'tabs__item--active')
+    deActiviteElementItem(elsTabsItem, modifiers.tabItemActive)
 
     // Add active class to current item
-    elTabLink.parentElement.classList.add('tabs__item--active')
+    elTabLink.parentElement.classList.add(modifiers.tabItemActive)
 
     // Remove active class from tabpanels__item elements
-    deActiviteElementItem(elsTabsPanel, 'tabpanels__item--active')
+    deActiviteElementItem(elsTabsPanel, modifiers.tabPanelActive)
 
     // Show active tab panel
     // const activTabItems = document.querySelector(`#${elTabLink.href.split('#')[1]}`)
     const activTabItems = document.querySelector(elTabLink.dataset.tabTarget)
-    activTabItems.classList.add('tabpanels__item--active')
+    activTabItems.classList.add(modifiers.tabPanelActive)
     console.log(elTabLink.dataset);
   })
 })
@@ -37,8 +44,8 @@ elsTabLink.forEach(elTabLink => {
 elsAccordionItemToggler.forEach(elAccordionItemToggler => {
   elAccordionItemToggler.addEventListener('click', () => {
     // El accordion item open - class remove
-    deActiviteElementItem(elsAccordionItem, 'accordion__item--open')
+    deActiviteElementItem(elsAccordionItem, modifiers.accordionItemOpen)
 
-    elAccordionItemToggler.closest('.accordion__item').classList.add('accordion__item--open')
+    elAccordionItemToggler.closest('.accordion__item').classList.add(modifiers.accordionItemOpen)
   })
 })
